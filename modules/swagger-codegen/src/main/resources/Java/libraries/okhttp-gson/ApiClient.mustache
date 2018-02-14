@@ -892,7 +892,7 @@ public class ApiClient {
         call.enqueue(new Callback() {
             @Override
             public void onFailure(Request request, IOException e) {
-                callback.onFailure(new ApiException(e), 0, null);
+                callback.onFailure(new ApiException(e), 0, null, request);
             }
 
             @Override
