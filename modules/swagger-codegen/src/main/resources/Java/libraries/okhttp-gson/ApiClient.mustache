@@ -902,7 +902,7 @@ public class ApiClient {
                 try {
                     result = (T) handleResponse(response, returnType);
                 } catch (ApiException e) {
-                    callback.onFailure(e, response.code(), response.headers().toMultimap());
+                    callback.onFailure(e, response.code(), response.headers().toMultimap(), null);
                     return;
                 }
                 callback.onSuccess(result, response.code(), response.headers().toMultimap());
