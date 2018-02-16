@@ -79,6 +79,7 @@ public class ApiClient {
      */
     public ApiClient() {
         httpClient = new OkHttpClient();
+        httpClient.setRetryOnConnectionFailure(false);
 
         {{#useGzipFeature}}
         // Enable gzip request compression
