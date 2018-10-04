@@ -143,6 +143,17 @@ public class ApiClient {
     }
 
     /**
+     * Set HTTP client connection pool
+     *
+     * @param pool An instance of ConnectionPool
+     * @return Api Client
+     */
+    public ApiClient setConnectionPool(ConnectionPool pool) {
+        httpClient.setConnectionPool(pool);
+        return this;
+    }
+
+    /**
      * Get JSON
      *
      * @return JSON object
