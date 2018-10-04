@@ -21,7 +21,7 @@
 
 :rocket: ProductHunt: https://producthunt.com/posts/swagger-codegen :rocket:
 
-:notebook_with_decorative_cover: The eBook [A Beginner's Guide to Code Generation for REST APIs](https://gumroad.com/l/swagger_codegen_beginner) is a good starting point for begineers.
+:notebook_with_decorative_cover: The eBook [A Beginner's Guide to Code Generation for REST APIs](https://gumroad.com/l/swagger_codegen_beginner) is a good starting point for beginners.
 
 ## Overview
 This is the swagger codegen project, which allows generation of API client libraries (SDK generation), server stubs and documentation automatically given an [OpenAPI Spec](https://github.com/OAI/OpenAPI-Specification). Currently, the following languages/frameworks are supported:
@@ -507,7 +507,7 @@ and `config.json` contains the following as an example:
 ```
 
 Supported config options can be different per language. Running `config-help -l {lang}` will show available options.
-**These options are applied via configuration file (e.g. config.json) or by passing them with `-D{optionName}={optionValue}`**. (If `-D{optionName}` does not work, please open a [ticket](https://github.com/swagger-api/swagger-codegen/issues/new) and we'll look into it)
+**These options are applied via configuration file (e.g. config.json) or by passing them with `java -jar swagger-codegen-cli.jar -D{optionName}={optionValue}`**. (If `-D{optionName}` does not work, please open a [ticket](https://github.com/swagger-api/swagger-codegen/issues/new) and we'll look into it)
 
 ```sh
 java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar config-help -l java
@@ -532,7 +532,7 @@ CONFIG OPTIONS
 	    retrofit - HTTP client: OkHttp 2.4.0. JSON processing: Gson 2.3.1 (Retrofit 1.9.0)
         retrofit2 - HTTP client: OkHttp 2.5.0. JSON processing: Gson 2.4 (Retrofit 2.0.0-beta2)
         google-api-client - HTTP client: google-api-client 1.23.0. JSON processing: Jackson 2.8.9
-        rest-assured - HTTP client: rest-assured : 3.0.6. JSON processing: Gson 2.6.1. Only for Java8 
+        rest-assured - HTTP client: rest-assured : 3.1.0. JSON processing: Gson 2.6.1. Only for Java8
 ```
 
 Your config file for Java can look like
@@ -657,7 +657,7 @@ To push the auto-generated SDK to GitHub, we provide `git_push.sh` to streamline
 ```sh
  java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate \
  -i modules/swagger-codegen/src/test/resources/2_0/petstore.json -l perl \
- --git-user-id "wing328" \
+ --git-user-id "swaggerapi" \
  --git-repo-id "petstore-perl" \
  --release-note "Github integration demo" \
  -o /var/tmp/perl/petstore
@@ -747,8 +747,11 @@ Please refer to this [page](https://github.com/swagger-api/swagger-codegen/blob/
 Companies/Projects using Swagger Codegen
 ----------------------------------------
 Here are some companies/projects using Swagger Codegen in production. To add your company/project to the list, please visit [README.md](https://github.com/swagger-api/swagger-codegen/blob/master/README.md) and click on the icon to edit the page.
+- [Acando](https://www.acando.de/)
 - [Accengage](https://www.accengage.com/)
+- [Accruent](https://www.accruent.com/)
 - [Activehours](https://www.activehours.com/)
+- [Actonica](https://www.actonica.com)
 - [Acunetix](https://www.acunetix.com/)
 - [Atlassian](https://www.atlassian.com/)
 - [Autodesk](http://www.autodesk.com/)
@@ -762,6 +765,7 @@ Here are some companies/projects using Swagger Codegen in production. To add you
 - [Bufferfly Network](https://www.butterflynetinc.com/)
 - [Cachet Financial](http://www.cachetfinancial.com/)
 - [carpolo](http://www.carpolo.co/)
+- [Carus](https://www.carus.com/)
 - [Cisco](http://www.cisco.com/)
 - [CloudBoost](https://www.CloudBoost.io/)
 - [Cloudsmith](https://cloudsmith.io/)
@@ -778,12 +782,14 @@ Here are some companies/projects using Swagger Codegen in production. To add you
 - [eureka](http://eure.jp/)
 - [everystory.us](http://everystory.us)
 - [Expected Behavior](http://www.expectedbehavior.com/)
+- [fashionTrade](https://www.fashiontrade.com/)
 - [Fastly](https://www.fastly.com/)
 - [FINRA](https://github.com/FINRAOS/herd/)
 - [Flat](https://flat.io)
 - [Finder](http://en.finder.pl/)
 - [Fitwell](https://fitwell.co/)
 - [FH Münster - University of Applied Sciences](http://www.fh-muenster.de)
+- [FormAPI](https://formapi.io/)
 - [Fotition](https://www.fotition.com/)
 - [Gear Zero Network](https://www.gearzero.ca)
 - [General Electric](https://www.ge.com/)
@@ -798,7 +804,7 @@ Here are some companies/projects using Swagger Codegen in production. To add you
 - [Hewlett Packard Enterprise](https://hpe.com)
 - [High Technologies Center](http://htc-cs.com)
 - [Hootsuite](https://hootsuite.com/)
-- [Huawei Cloud](http://www.huaweicloud.com/en-us/product/cs.html) 
+- [Huawei Cloud](http://www.huaweicloud.com/en-us/product/cs.html)
 - [Husbanken](https://www.husbanken.no)
 - [IBM](https://www.ibm.com)
 - [IMS Health](http://www.imshealth.com/en/solution-areas/technology-and-applications)
@@ -944,16 +950,15 @@ Presentations/Videos/Tutorials/Books
 - 2018/01/11 - [Swagger 工具箱介绍及代码自动生成示例](https://github.com/qct/swagger-example) by [qct](https://github.com/qct)
 - 2018/01/19 - [Generowanie kodu usług REST - przewodnik dla początkujących](https://gum.co/swagger_codegen_beginner_pl)(eBook) by [William Cheng](https://github.com/wing328), [Tomasz Prus](https://github.com/tomplus), [Bartek Kryza](https://github.com/bkryza)
 - 2018/02/03 - [Writing REST APIs with OpenAPI and Swagger Ada](https://www.slideshare.net/StephaneCarrez1/writing-rest-apis-with-openapi-and-swagger-ada/StephaneCarrez1/writing-rest-apis-with-openapi-and-swagger-ada) by [Stephane Carrez](https://github.com/stcarrez) at [FOSDEM 2018](https://fosdem.org/2018)
-
+- 2018/02/28 - [OpenAPI–An eBay Perspective](https://www.ebayinc.com/stories/blogs/tech/openapi-an-ebay-perspective/) by Shekhar Banerjee (eBay)
+- 2018/03/16 - [REST APIのためのコード生成入門](https://gumroad.com/l/swagger_codegen_beginner_jp) by [William Cheng](https://github.com/wing328), [中野暁人](https://github.com/ackintosh), [和田拓朗](https://github.com/taxpon)
 
 # Swagger Codegen Core Team
 
 Swagger Codegen core team members are contributors who have been making significant contributions (review issues, fix bugs, make enhancements, etc) to the project on a regular basis.
 
 ## Core Team Members
-* [@jimschubert](https://github.com/jimschubert)
-* [@cbornet](https://github.com/cbornet)
-* [@jaz-ah](https://github.com/jaz-ah)
+
 
 ## Template Creator
 Here is a list of template creators:
@@ -1049,8 +1054,6 @@ Here are the requirements to become a core team member:
   - about 3 hours per week
   - for contribution, it can be addressing issues, reviewing PRs submitted by others, submitting PR to fix bugs or make enhancements, etc
 
- To join the core team, please reach out to wing328hk@gmail.com (@wing328) for more information.
-
  To become a Template Creator, simply submit a PR for new API client (e.g. Rust, Elixir) or server stub (e.g. Ruby Grape) generator.
 
 # Swagger Codegen Technical Committee
@@ -1064,41 +1067,40 @@ Members of the Swagger Codegen technical committee shoulder the following respon
 
 Who is eligible? Those who want to join must have at least 3 PRs merged into a generator. (Exceptions can be granted to template creators or contributors who have made a lot of code changes with less than 3 merged PRs)
 
-If you want to join the committee, please kindly apply by sending an email to wing328hk@gmail.com ([@wing328](https://github.com/wing328)) with your Github ID.
-
 ## Members of Technical Committee
 
 | Languages     | Member (join date) |
 |:-------------|:-------------|
 | ActionScript |      |
-| Android | @jaz-ah (2017/09) |
+| Ada | @stcarrez (2018/02) |
+| Android |  |
 | Apex  |     |
-| Bash  | @frol (2017/07) @bkryza (2017/08) @kenjones-cisco (2017/09) |
-| C++      | @ravinikam (2017/07) @stkrwork (2017/07) @fvarose (2017/11) |
-| C#        | @mandrean (2017/08) @jimschubert (2017/09) |
+| Bash  | @kenjones-cisco (2017/09) |
+| C++      | @fvarose (2017/11) |
+| C#        | @mandrean (2017/08) |
 | Clojure   |  |
 | Dart      | @ircecho (2017/07) |
-| Eiffel    | @jvelilla (2017/09) |
+| Eiffel    | |
 | Elixir    |  |
 | Elm       |  |
-| Erlang    | @tsloughter (2017/11) |
+| Erlang    | |
 | Groovy    |  |
-| Go        | @antihax (2017/11) @bvwells (2017/12) |
+| Go        | |
 | Haskell   | |
-| Java      | @bbdouglas (2017/07) @JFCote (2017/08) @sreeshas (2017/08) @jfiala (2017/08) @lukoyanov (2017/09) @cbornet (2017/09) @jeff9finger (2018/01) |
-| Kotlin     | @jimschubert (2017/09) |
-| Lua     | @daurnimator (2017/08) |
-| NodeJS/Javascript | @CodeNinjai (2017/07) @frol (2017/07) @cliffano (2017/07) |
+| Java      | |
+| Kotlin     | |
+| Lua     | |
+| NodeJS/Javascript | @CodeNinjai (2017/07) |
 | ObjC      |  |
-| Perl      | @wing328 (2017/07) |
-| PHP      | @jebentier (2017/07) @dkarlovi (2017/07) @mandrean (2017/08) @jfastnacht (2017/09) @ackintosh (2017/09) |
-| Python   | @taxpon (2017/07) @frol (2017/07) @mbohlool (2017/07) @cbornet (2017/09) @kenjones-cisco (2017/11)|
+| Perl      | |
+| PHP      | @dkarlovi (2017/07) @mandrean (2017/08) |
+| Python   | @kenjones-cisco (2017/11)|
 | R        |  |
-| Ruby      | @cliffano (2017/07) @zlx (2017/09) |
-| Rust      | @frol (2017/07) @farcaller (2017/08) @bjgill (2017/12) |
-| Scala     | @clasnake (2017/07) @jimschubert (2017/09) @shijinkui  (2018/01) |
-| Swift     | @jgavris (2017/07) @ehyche (2017/08) @Edubits (2017/09) @jaz-ah (2017/09) |
-| TypeScript | @TiFu (2017/07) @taxpon (2017/07) @sebastianhaas (2017/07) @kenisteward (2017/07) @Vrolijkx (2017/09) @macjohnny (2018/01) |
+| Ruby      | @zlx (2017/09) |
+| Rust      | |
+| Scala     | |
+| Swift     | @ehyche (2017/08) |
+| TypeScript | |
 
 
 # License information on Generated Code
@@ -1109,7 +1111,7 @@ The Swagger Codegen project is intended as a benefit for users of the Swagger / 
 * Generated code is intentionally _not_ subject to the parent project license
 
 When code is generated from this project, it shall be considered **AS IS** and owned by the user of the software.  There are no warranties--expressed or implied--for generated code.  You can do what you wish with it, and once generated, the code is your responsibility and subject to the licensing terms that you deem appropriate.
- 
+
 License
 -------
 
@@ -1127,4 +1129,3 @@ limitations under the License.
 
 ---
 <img src="http://swagger.io/wp-content/uploads/2016/02/logo.jpg"/>
-
